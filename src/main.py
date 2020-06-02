@@ -19,3 +19,11 @@
 
 import numpy as np
 import csv
+
+if __name__ == '__main__':
+    with open("../data/momenta.csv") as csv_file:
+        momentum_reader = csv.reader(csv_file)
+        pass
+
+
+
