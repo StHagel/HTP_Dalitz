@@ -18,6 +18,7 @@
 """
 
 import numpy as np
+import math
 import csv
 
 if __name__ == '__main__':
@@ -34,13 +35,14 @@ if __name__ == '__main__':
         p4_pi_0 = []
 
         for row in momentum_reader:
-            e_pi_c = np.sqrt(m_pi_c ** 2 + float(row[0]) ** 2 + float(row[1]) ** 2 + float(row[2]) ** 2)
+            # The energies are calculated using the standard relativistic dispersion relation
+            e_pi_c = math.sqrt(m_pi_c ** 2 + float(row[0]) ** 2 + float(row[1]) ** 2 + float(row[2]) ** 2)
             p4_pi_c.append([e_pi_c, row[0], row[1], row[2]])
 
-            e_k_c = np.sqrt(m_k_c ** 2 + float(row[3]) ** 2 + float(row[4]) ** 2 + float(row[5]) ** 2)
+            e_k_c = math.sqrt(m_k_c ** 2 + float(row[3]) ** 2 + float(row[4]) ** 2 + float(row[5]) ** 2)
             p4_k_c.append([e_k_c, row[3], row[4], row[5]])
 
-            e_pi_0 = np.sqrt(m_pi_0 ** 2 + float(row[6]) ** 2 + float(row[7]) ** 2 + float(row[8]) ** 2)
+            e_pi_0 = math.sqrt(m_pi_0 ** 2 + float(row[6]) ** 2 + float(row[7]) ** 2 + float(row[8]) ** 2)
             p4_pi_0.append([e_pi_0, row[6], row[7], row[8]])
 
         print(p4_pi_c[0])
