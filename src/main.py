@@ -121,9 +121,9 @@ if __name__ == '__main__':
             m_k_c_pi_0.append(invariant_mass(p4_k_c[i], p4_pi_0[i]))
 
         masses = {
-            "m12": m_pi_c_k_c,
-            "m23": m_k_c_pi_0,
-            "m13": m_pi_c_pi_0
+            r"$m^2_{12}$": m_pi_c_k_c,
+            r"$m^2_{23}$": m_k_c_pi_0,
+            r"$m^2_{13}$": m_pi_c_pi_0
         }
         df = pd.DataFrame(masses)
 
