@@ -63,7 +63,7 @@ def draw_dalitz_plot(_df):
 
     dalitz = sns.PairGrid(_df)
     dalitz = dalitz.map_lower(sns.scatterplot, marker=".")
-    dalitz = dalitz.map_upper(sns.kdeplot, shade=True, shade_lowest=False, cmap="Blues", n_levels=1000)
+    dalitz = dalitz.map_upper(sns.kdeplot, shade=True, cmap="Blues", n_levels=1000)
     dalitz = dalitz.map_diag(sns.kdeplot, lw=2, shade=True)
     plt.show()
 
