@@ -13,6 +13,8 @@ The following python packages are required in order to run the code:
 - `pandas`
 - `statistics`
 
+You can install them by running `pip3 install -r requirements.txt`.
+
 ## Running the code
 
 To run the code, simply `cd` into the `src` directory and type:
